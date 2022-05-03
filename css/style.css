@@ -76,6 +76,13 @@ body {
   transition: .2s;
 }
 
+.menu.active {
+  width: 400px;
+  height: 400px;
+  top: -65px;
+  left: -50px;
+}
+
 .menu:hover {
   width: 400px;
   height: 400px;
@@ -170,5 +177,19 @@ body {
 
 .colors__color--green {
   background-color: #5cff4d;
+}
+
+.background {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(213, 222, 212, 0.2);
+}
+
+.background.active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
