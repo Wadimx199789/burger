@@ -1,0 +1,114 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(255,77,121);
+    transition: .5s;
+}
+.burger-menu{
+    width:50px;
+    height:50px;
+    background-color: #fff;
+    border-radius:50%;
+    margin:18px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    row-gap: 5px;
+    z-index: 2;
+    &:hover ~ .menu{
+        width: 400px;
+        height: 400px;
+    }
+    &:hover ~ .menu{
+        top:-65px;
+        left:-50px;
+    }
+    &__line{
+        width:25px;
+        height:2px;
+        background-color: #000;
+    }
+}
+.menu{
+    width:50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    left: 18px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    &:hover{
+        width: 400px;
+        height: 400px;
+        top:-65px;
+        left:-50px;
+    }
+    &__item{
+        transform: rotate(17deg);
+        &::before{
+            content:"";
+            position:absolute;
+            width:10px;
+            height:2px;
+            bottom:-2px;
+            left:0;
+            background-color: #000;
+            transition: .2s;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
+    }
+    &__link{
+        font-size: 20px;
+    }
+}
+.colors{
+    width:70px;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    right:0;
+    top:calc(50%-25%);
+    border-radius:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap:5px;
+    &__color{
+        width:50px;
+        height:40px;
+        border-radius: 5px;
+        background-color: #000;
+        &--pink{
+            background-color: rgb(255,77,121);
+        }
+        &--blue{
+            background-color: rgb(77,148,255);
+        }
+        &--yellow{
+            background-color: rgb(255, 252, 77);
+        }
+        &--green{
+            background-color: rgb(92, 255, 77);
+        }
+    }
+}
