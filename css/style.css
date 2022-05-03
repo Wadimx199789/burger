@@ -33,20 +33,22 @@ body {
   z-index: 2;
 }
 
-.burger-menu:hover ~ .menu {
-  width: 400px;
-  height: 400px;
-}
-
-.burger-menu:hover ~ .menu {
-  top: -65px;
-  left: -50px;
-}
-
 .burger-menu__line {
   width: 25px;
   height: 2px;
   background-color: #000;
+}
+
+.burger-menu.active {
+  position: relative;
+}
+
+.burger-menu.active .burger-menu__line--top {
+  margin-top: 23px;
+}
+
+.burger-menu.active .burger-menu__line--botom {
+  margin-bottom: 23px;
 }
 
 .menu {
@@ -77,13 +79,6 @@ body {
 }
 
 .menu.active {
-  width: 400px;
-  height: 400px;
-  top: -65px;
-  left: -50px;
-}
-
-.menu:hover {
   width: 400px;
   height: 400px;
   top: -65px;

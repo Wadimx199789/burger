@@ -18,18 +18,22 @@ body{
     flex-direction: column;
     row-gap: 5px;
     z-index: 2;
-    &:hover ~ .menu{
-        width: 400px;
-        height: 400px;
-    }
-    &:hover ~ .menu{
-        top:-65px;
-        left:-50px;
-    }
     &__line{
         width:25px;
         height:2px;
         background-color: #000;
+    }
+    &.active{
+        position: relative;
+        .burger-menu__line--top{
+            margin-top:23px;
+        }
+        .burger-menu__line--center{
+        }
+        .burger-menu__line--botom{
+            margin-bottom:23px;
+
+        }
     }
 }
 .menu{
@@ -53,12 +57,7 @@ body{
         top:-65px;
         left:-50px;
     }
-    &:hover{
-        width: 400px;
-        height: 400px;
-        top:-65px;
-        left:-50px;
-    }
+
     &__item{
         transform: rotate(17deg);
         &::before{

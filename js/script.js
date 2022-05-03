@@ -14,6 +14,7 @@ colors.forEach((color)=>{
 burgerButton.addEventListener("click",()=>{
     menu.classList.toggle("active");
     background.classList.toggle("active");
+    burgerButton.classList.toggle("active")
 });
 background.addEventListener("click",()=>{
     menu.classList.remove("active");
